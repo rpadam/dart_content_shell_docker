@@ -1,6 +1,6 @@
 # Dart SDK with content_shell and xvfb
 
-FROM rpadam/dart_docker:1.13.2
+FROM rpadam/dart_docker:latest
 
 MAINTAINER Raphael Adam <raphael.adam@workiva.com, raphael912003@gmail.com>
 
@@ -14,9 +14,6 @@ RUN echo "deb http://us.archive.ubuntu.com/ubuntu precise main multiverse" >> /e
     chromium-browser \
     libudev0 \
     && apt-get clean
-
-ENV CHANNEL stable
-ENV ARCHIVE_URL https://storage.googleapis.com/dart-archive/channels/$CHANNEL/release/$SDK_VERSION
 
 # Install Content Shell
 RUN wget $ARCHIVE_URL/dartium/content_shell-linux-x64-release.zip \
