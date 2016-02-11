@@ -1,18 +1,19 @@
 # Dart SDK with content_shell and xvfb
 
-FROM rpadam/dart_docker:latest
+FROM rpadam/dart_docker:1.13.2
 
 MAINTAINER Raphael Adam <raphael.adam@workiva.com, raphael912003@gmail.com>
 
 LABEL Description="This image contains the Dart SDK with content_shell and xvfb"
 
 RUN echo "deb http://us.archive.ubuntu.com/ubuntu precise main multiverse" >> /etc/apt/sources.list \
-    && apt-get update; echo 'true' && apt-get install -y \
+    && apt-get update && apt-get install -y \
     wget \
     unzip \
     xvfb \
     chromium-browser \
     libudev0 \
+    lcov \
     && apt-get clean
 
 # Install Content Shell
