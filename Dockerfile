@@ -13,6 +13,7 @@ RUN echo "deb http://us.archive.ubuntu.com/ubuntu precise main multiverse" >> /e
     xvfb \
     chromium-browser \
     libudev0 \
+    lcov \
     && apt-get clean
 
 # Install Content Shell
