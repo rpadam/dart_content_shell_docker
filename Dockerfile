@@ -1,6 +1,6 @@
 # Dart SDK with content_shell and xvfb
 
-FROM rpadam/dart_docker:latest
+FROM rpadam/dart_docker:1.13.2
 
 MAINTAINER Raphael Adam <raphael.adam@workiva.com, raphael912003@gmail.com>
 
